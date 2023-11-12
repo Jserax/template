@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "ds_project"
+version = "0.1.0"
+description = "Template repository to start your Data Science project from"
+authors = ["Maxim Grigorev <gignm01@gmail.com>"]
+maintainers = ["Maxim Grigorev <gignm01@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/Jserax/ds_template"
+keywords = ["data science", "template"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "3.10.12"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.3"
+pre-commit = "^3.5.0"
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+src_paths = ["src"]
+profile = "black"
+line_length = 88
+lines_after_imports = 2
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
